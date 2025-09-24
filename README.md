@@ -1,1 +1,0 @@
-# quran-hifdh-privacy
