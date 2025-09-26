@@ -13,122 +13,257 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #004d24 0%, #058743 100%);
+            line-height: 1.7;
+            color: #2C3E3F;
+            background: linear-gradient(135deg, #22575D 0%, #55BAC6 100%);
             min-height: 100vh;
             padding: 20px;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(34, 87, 93, 0.3);
+            position: relative;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
             border-bottom: 3px solid #d4af37;
+            position: relative;
         }
         
         .arabic-title {
-            font-size: 48px;
+            font-size: 56px;
             color: #d4af37;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         h1 {
-            color: #004d24;
-            font-size: 32px;
-            margin-bottom: 10px;
+            color: #22575D;
+            font-size: 38px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
         .last-updated {
-            color: #666;
-            font-size: 14px;
+            color: #556B6D;
+            font-size: 16px;
             font-style: italic;
+            background: rgba(85, 186, 198, 0.1);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
         }
         
         h2 {
-            color: #004d24;
-            font-size: 24px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            color: #22575D;
+            font-size: 28px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, #55BAC6);
+            border-radius: 2px;
         }
         
         h3 {
-            color: #058743;
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            color: #55BAC6;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
         
         p {
-            margin-bottom: 15px;
-            color: #555;
+            margin-bottom: 18px;
+            color: #2C3E3F;
+            font-size: 16px;
+            line-height: 1.8;
         }
         
         ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
+            margin-left: 0;
+            margin-bottom: 20px;
+            list-style: none;
         }
         
         li {
-            margin-bottom: 8px;
-            color: #555;
+            margin-bottom: 12px;
+            color: #2C3E3F;
+            padding-left: 25px;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        li::before {
+            content: '•';
+            color: #d4af37;
+            font-weight: bold;
+            position: absolute;
+            left: 8px;
+            font-size: 18px;
         }
         
         .highlight {
-            background-color: #f0f8f0;
-            padding: 15px;
-            border-left: 4px solid #009c4a;
-            border-radius: 5px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(107, 155, 124, 0.1), rgba(85, 186, 198, 0.1));
+            padding: 25px;
+            border-left: 5px solid #6B9B7C;
+            border-radius: 16px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(107, 155, 124, 0.1);
+        }
+        
+        .highlight p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+        
+        .highlight strong {
+            color: #22575D;
         }
         
         .contact {
-            background-color: #fff8e1;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #d4af37;
-            margin: 30px 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(85, 186, 198, 0.05));
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 5px solid #d4af37;
+            margin: 40px 0;
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.15);
+        }
+        
+        .contact h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
         }
         
         .contact a {
-            color: #004d24;
-            font-weight: bold;
+            color: #22575D;
+            font-weight: 600;
             text-decoration: none;
+            background: rgba(34, 87, 93, 0.1);
+            padding: 8px 16px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
         }
         
         .contact a:hover {
-            text-decoration: underline;
+            background: rgba(34, 87, 93, 0.2);
+            transform: translateY(-1px);
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid rgba(85, 186, 198, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(85, 186, 198, 0.1);
+        }
+        
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #6B9B7C, #55BAC6);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 10px 0;
+            box-shadow: 0 4px 15px rgba(107, 155, 124, 0.3);
+        }
+        
+        .security-badge::before {
+            content: '🔒';
+            margin-right: 8px;
+            font-size: 16px;
         }
         
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
-            color: #666;
-            font-size: 14px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(85, 186, 198, 0.3);
+            background: linear-gradient(135deg, rgba(34, 87, 93, 0.05), rgba(85, 186, 198, 0.05));
+            border-radius: 16px;
+            padding: 30px;
+        }
+        
+        .footer p {
+            color: #556B6D;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .islamic-text {
+            color: #22575D;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 15px;
         }
         
         @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 30px 25px;
+            }
+            
+            .arabic-title {
+                font-size: 42px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            h3 {
+                font-size: 18px;
+            }
+            
+            p, li {
+                font-size: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
             .container {
                 padding: 20px;
             }
             
-            h1 {
-                font-size: 24px;
+            .arabic-title {
+                font-size: 36px;
             }
             
-            h2 {
-                font-size: 20px;
+            h1 {
+                font-size: 24px;
             }
         }
     </style>
@@ -138,93 +273,162 @@
         <div class="header">
             <div class="arabic-title">القرآن</div>
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: September 24, 2025</p>
+            <p class="last-updated">Last updated: January 2025</p>
         </div>
 
         <h2>1. Introduction</h2>
-        <p>Welcome to Quran Hifdh. This Privacy Policy explains how we handle your information when you use our mobile application. Your privacy is important to us, and we are committed to protecting your personal data.</p>
+        <p>Welcome to Quran Hifdh ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application. Your privacy is sacred to us, and we handle your data with the same care we would want for our own Quran memorization journey.</p>
 
         <h2>2. Information We Collect</h2>
         
         <h3>2.1 Personal Information</h3>
         <ul>
-            <li>Your name (if provided during onboarding)</li>
+            <li>Your name (optional, provided during onboarding for personalization)</li>
             <li>Daily memorization goals and preferences</li>
             <li>App settings and configurations</li>
         </ul>
         
-        <h3>2.2 Usage Data</h3>
+        <h3>2.2 Memorization Data</h3>
         <ul>
-            <li>Memorization progress and statistics</li>
-            <li>App usage patterns and preferences</li>
-            <li>Achievement data and milestones</li>
-            <li>Reading and revision history</li>
-            <li>Audio playback preferences</li>
+            <li>Which ayahs you have memorized and when</li>
+            <li>Daily progress and statistics</li>
+            <li>Achievement milestones and badges earned</li>
+            <li>Revision schedules and completion data</li>
+            <li>Audio playback preferences and history</li>
+        </ul>
+
+        <h3>2.3 App Usage Information</h3>
+        <ul>
+            <li>Feature usage patterns within the app</li>
+            <li>Error logs and crash reports (anonymous)</li>
+            <li>Performance metrics for app optimization</li>
         </ul>
 
         <div class="highlight">
-            <p><strong>Important:</strong> All your memorization data is stored locally on your device. We do not transmit your personal progress to external servers. Your data remains completely private and under your control.</p>
+            <p><strong>Your Privacy is Our Priority:</strong> All your memorization data is stored locally on your device. We do not transmit your personal progress to external servers. Your Quran memorization journey remains completely private between you and Allah (SWT).</p>
         </div>
 
+        <div class="security-badge">100% Local Data Storage</div>
+
         <h2>3. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
+        <p>We use the information collected to:</p>
         <ul>
-            <li>Provide and maintain the App's functionality</li>
-            <li>Track your memorization progress and statistics</li>
+            <li>Provide and maintain the app's functionality</li>
+            <li>Track your memorization progress and calculate statistics</li>
             <li>Personalize your Quran learning experience</li>
-            <li>Calculate achievements and milestones</li>
-            <li>Optimize revision scheduling based on your progress</li>
-            <li>Improve app performance and fix bugs</li>
-            
+            <li>Calculate achievements and unlock milestones</li>
+            <li>Optimize revision scheduling based on proven memorization methods</li>
+            <li>Improve app performance and fix technical issues</li>
+            <li>Provide technical support when you contact us</li>
         </ul>
 
         <h2>4. Data Storage and Security</h2>
+        <div class="info-card">
+            <ul>
+                <li>All your memorization data is stored locally on your device using secure storage methods</li>
+                <li>We do not transmit your personal progress to external servers</li>
+                <li>Your data remains completely under your control</li>
+                <li>No third parties have access to your personal memorization data</li>
+                <li>We implement appropriate security measures to protect local data</li>
+                <li>Your spiritual journey data is treated as an amanah (trust)</li>
+            </ul>
+        </div>
+
+        <h2>5. External Services and API Usage</h2>
+        
+        <h3>5.1 Quran Content Delivery</h3>
+        <p>Our app connects to external services to provide authentic Quran content:</p>
         <ul>
-            <li>All your memorization data is stored locally on your device</li>
-            <li>We do not transmit your personal progress to external servers</li>
-            <li>Your data remains completely private and under your control</li>
-            <li>Your Quran memorization journey is between you, the app, and Allah</li>
-            <li>No third parties have access to your personal memorization data</li>
+            <li>Quran text from trusted Islamic sources with Uthmanic script</li>
+            <li>High-quality audio recitations from qualified reciters</li>
+            <li>Translation content from reputable Islamic scholars</li>
         </ul>
 
-        <h2>5. Third-Party Services</h2>
-        <p>Our app may use third-party services for:</p>
+        <h3>5.2 Anonymous API Requests</h3>
+        <div class="info-card">
+            <p><strong>Important:</strong> When fetching Quran content, no personal data is transmitted. API requests are completely anonymous and do not contain any user identification or memorization progress.</p>
+        </div>
+
+        <h3>5.3 Network Activity</h3>
         <ul>
-            <li>Quran text and audio content (from trusted Islamic sources)</li>
-            <li>App performance monitoring</li>
-            <li>Audio streaming for recitations</li>
+            <li>The app requires internet connection to download Quran content initially</li>
+            <li>Once downloaded, content can be accessed offline</li>
+            <li>Audio recitations are streamed and may be cached locally for better performance</li>
+            <li>No tracking cookies or advertising networks are used</li>
+            <li>External services may log anonymous request data for their own analytics</li>
         </ul>
-        <p>These services have their own privacy policies. We carefully select services that respect user privacy and Islamic values.</p>
 
-        <h2>6. Children's Privacy</h2>
-        <p>Our App is designed to help Muslims of all ages memorize the Quran, including children. We take children's privacy seriously. All data is stored locally and not transmitted to external servers.</p>
+        <h2>6. Data Sharing and Third Parties</h2>
+        <p>We do not sell, trade, or rent your personal information to third parties. We may share information only in these limited circumstances:</p>
+        <ul>
+            <li>With your explicit consent</li>
+            <li>To comply with legal obligations</li>
+            <li>To protect our rights and the safety of users</li>
+            <li>For technical support when you specifically request help</li>
+        </ul>
 
-        <h2>7. Your Rights</h2>
+        <div class="highlight">
+            <p><strong>Zero Data Sharing:</strong> Your memorization progress, achievements, and personal settings are never shared with anyone without your explicit permission.</p>
+        </div>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Our App is designed to help Muslims of all ages memorize the Quran, including children. We take children's privacy seriously:</p>
+        <ul>
+            <li>We do not knowingly collect personal information from children under 13 without parental consent</li>
+            <li>Parents should supervise their children's use of the app</li>
+            <li>All data is stored locally and not transmitted to external servers</li>
+            <li>The app does not contain any inappropriate content for young users</li>
+        </ul>
+
+        <h2>8. Your Rights and Control</h2>
         <p>You have complete control over your data:</p>
         <ul>
-            <li>Access your data (stored locally on your device)</li>
-            <li>Delete your data (through app settings or by uninstalling)</li>
-            <li>Export your data (backup feature for device transfers)</li>
+            <li>Access all your data (stored locally on your device)</li>
+            <li>Delete your data through app settings or by uninstalling the app</li>
+            <li>Export your data for backup purposes when transferring devices</li>
             <li>Modify your settings and preferences at any time</li>
+            <li>Contact us with privacy concerns or questions</li>
+            <li>Request data deletion from our support records</li>
         </ul>
 
-        <h2>8. Changes to This Policy</h2>
-        <p>We may update this privacy policy from time to time. We will notify you of any changes by updating the "last updated" date at the top of this policy.</p>
-        </ul>
+        <h2>9. Islamic Values and Data Handling</h2>
+        <div class="info-card">
+            <p>As a Muslim developer creating an app for the Muslim community, we handle your data according to Islamic principles:</p>
+            <ul>
+                <li>Your memorization data is treated as an amanah (trust)</li>
+                <li>We do not use your data for any purposes contrary to Islamic values</li>
+                <li>The sacred text of the Quran is handled with utmost respect</li>
+                <li>We regularly make du'a for all users of this app</li>
+                <li>Transparency and honesty guide all our data practices</li>
+            </ul>
+        </div>
 
-        <h2>9. App Store Distribution</h2>
-        <p>This app is distributed through Google Play Store. By downloading from Google Play, you also agree to Google's terms of service and privacy policy.</p>
+        <h2>10. App Store Distribution</h2>
+        <p>This app is distributed through Google Play Store and potentially other app stores. By downloading from these platforms, you also agree to their respective terms of service and privacy policies. We comply with all app store requirements for data handling and user privacy.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by:</p>
+        <ul>
+            <li>Posting the new privacy policy in the app</li>
+            <li>Updating the "last updated" date at the top of this policy</li>
+            <li>For significant changes, providing additional notification through the app</li>
+        </ul>
+        <p>Changes are effective immediately upon posting.</p>
 
         <div class="contact">
-            <h2>10. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <h2>12. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact me directly:</p>
             <p>Email: <a href="mailto:shayanshehzadqureshi@gmail.com">shayanshehzadqureshi@gmail.com</a></p>
-            <p>We personally read and respond to every privacy-related inquiry.</p>
+            <p>Subject: Quran Hifdh Privacy Policy</p>
+            <p><strong>Personal Commitment:</strong> I personally read and respond to every privacy-related inquiry. Your privacy and peace of mind are important to me, and I'm committed to addressing any concerns you may have about how your data is handled.</p>
         </div>
 
         <div class="footer">
-            <p>© 2025 Quran Hifdh. Developed with ❤️ for the Ummah</p>
-            <p style="margin-top: 10px;">بارك الله فيكم - May Allah bless you</p>
+            <p>© 2025 Quran Hifdh - Developed with ❤️ for the Ummah</p>
+            <p class="islamic-text">بارك الله فيكم - May Allah bless you and accept your efforts</p>
+            <p style="margin-top: 20px; font-style: italic;">
+                "And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose." - Quran 65:3
+            </p>
         </div>
     </div>
 </body>
